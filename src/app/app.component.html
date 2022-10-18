@@ -1,19 +1,33 @@
-<h1>{{ title }}</h1>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid d-flex justify-content-center">
+        <h1>{{ title }}</h1>
+    </div>
+</nav>
+<br/>
 
-<div class="container">
+<div class="container d-flex justify-content-center">
 
+<div class="card bg-light" style="width:20rem">
+    <div class="card-body">
+        <form >
 
-<form >
-
-Numero 1: <input type="number" [(ngModel)]="numero1" name="numero1"><br/><br/>
-
-Numero 2: <input type="number" [(ngModel)]="numero2" name="numero2"/><br/><br/>
-
-<input type="submit" value="Sumar" (click)="sumar()" class="btn btn-primary">
-<input type="submit" value="Restar" (click)="restar()" class="btn btn-danger">
-
-
-</form>
-<p>Resultado: {{ resultado }}</p>
-
+            Numero 1: <input type="number" [(ngModel)]="numero1" name="numero1"><br/><br/>
+            
+            Numero 2: <input type="number" [(ngModel)]="numero2" name="numero2"/><br/><br/>
+        
+            <div class="btn-toolbar justify-content-between">
+                <div class="btn me-2">
+                    <input type="submit" value="Sumar" (click)="sumar()" class="btn btn-primary">
+                </div>
+                <div class="btn me-2">
+                    <input type="submit" value="Restar" (click)="restar()" class="btn btn-danger">
+                </div>    
+            </div>
+            
+            
+            </form>
+            <p>Resultado: {{ resultado }}</p>
+            
+    </div>
+</div>
 </div>
